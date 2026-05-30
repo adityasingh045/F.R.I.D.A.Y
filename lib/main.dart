@@ -19,6 +19,8 @@ class MyApp extends StatelessWidget {
 }
 
 class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -36,7 +38,7 @@ class _HomePageState extends State<HomePage> {
     super.initState();
 
     channel = WebSocketChannel.connect(
-      Uri.parse('ws://localhost:8080'),
+      Uri.parse('ws://127.0.0.1:8080'),
     );
 
     channel.stream.listen((data) {
