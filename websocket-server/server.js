@@ -9,26 +9,16 @@ console.log("WebSocket Server Running");
 let clients = [];
 
 wss.on("connection", (ws) => {
-
     console.log("New Device Connected");
 
-    clients.push(ws);
+    ws.send("Connected to server");
 
     ws.on("message", (message) => {
-
         console.log("Message:", message.toString());
 
-        // Broadcast to all clients
-        clients.forEach(client => {
-
-            if (
-                client !== ws &&
-                client.readyState === WebSocket.OPEN
-            ) {
-                client.send(message);
-            }
-        });
+        ws.send("Server received: " + message);
     });
+
 
     ws.on("close", () => {
 
