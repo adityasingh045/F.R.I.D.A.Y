@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Miscellaneous
 *.class
 *.log
@@ -46,3 +47,8 @@ app.*.map.json
 
 # Widget Preview related
 .widget_preview/
+=======
+.venv/
+__pycache__/
+.DS_Store
+>>>>>>> a5101bb545ddb1e67db2c5901503e4632712aea8
