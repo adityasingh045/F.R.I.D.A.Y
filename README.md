@@ -1,1 +1,1 @@
-# SpatialO
+# F.R.I.D.A.Y
